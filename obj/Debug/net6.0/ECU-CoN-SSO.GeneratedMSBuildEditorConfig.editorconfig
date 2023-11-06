@@ -1,0 +1,171 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ECU-CoN-SSO
+build_property.RootNamespace = ECU-CoN-SSO
+build_property.ProjectDir = C:\Users\Matt Miranda\Documents\ECU-CoN-SSO\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Matt Miranda\Documents\ECU-CoN-SSO
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Account/Create/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxDcmVhdGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Account/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dpblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Account/Logout/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dvdXRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Account/Logout/LoggedOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dvdXRcTG9nZ2VkT3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Admin/ApiScopes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQXBpU2NvcGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Admin/ApiScopes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQXBpU2NvcGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Admin/ApiScopes/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQXBpU2NvcGVzXE5ldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Admin/Clients/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2xpZW50c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Admin/Clients/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2xpZW50c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Admin/Clients/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2xpZW50c1xOZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Admin/IdentityScopes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSWRlbnRpdHlTY29wZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Admin/IdentityScopes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSWRlbnRpdHlTY29wZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Admin/IdentityScopes/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSWRlbnRpdHlTY29wZXNcTmV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Ciba/All.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2liYVxBbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Ciba/Consent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2liYVxDb25zZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Ciba/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2liYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Ciba/_ScopeListItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2liYVxfU2NvcGVMaXN0SXRlbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Consent/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc2VudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Consent/_ScopeListItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc2VudFxfU2NvcGVMaXN0SXRlbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Device/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGV2aWNlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Device/Success.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGV2aWNlXFN1Y2Nlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Device/_ScopeListItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGV2aWNlXF9TY29wZUxpc3RJdGVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Diagnostics/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlhZ25vc3RpY3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/ExternalLogin/Callback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXh0ZXJuYWxMb2dpblxDYWxsYmFjay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/ExternalLogin/Challenge.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXh0ZXJuYWxMb2dpblxDaGFsbGVuZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Grants/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3JhbnRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Home/Error/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVxFcnJvclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Portal/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ydGFsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Redirect/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVkaXJlY3RcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/ServerSideSessions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VydmVyU2lkZVNlc3Npb25zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Shared/_Nav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9OYXYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/Shared/_ValidationSummary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU3VtbWFyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matt Miranda/Documents/ECU-CoN-SSO/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
