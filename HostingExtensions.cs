@@ -6,6 +6,7 @@ using ECU_CoN_SSO.Pages.Admin.IdentityScopes;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using System.Reflection;
 
 namespace ECU_CoN_SSO
 {
@@ -34,7 +35,7 @@ namespace ECU_CoN_SSO
                 {
                     options.ConfigureDbContext = b =>
                         // b.UseSqlite(connectionString, dbOpts => dbOpts.MigrationsAssembly(typeof(Program).Assembly.FullName));
-                        b.UseSqlServer(connectionString);
+                        b.UseSqlServer(connectionString, sql => sql.MigrationsAssembly(typeof(Program).GetTypeInfo().Assembly.GetName().Name));
                 })
                 // this is something you will want in production to reduce load on and requests to the DB
                 //.AddConfigurationStoreCache()
@@ -44,7 +45,7 @@ namespace ECU_CoN_SSO
                 {
                     options.ConfigureDbContext = b =>
                         // b.UseSqlite(connectionString, dbOpts => dbOpts.MigrationsAssembly(typeof(Program).Assembly.FullName));
-                        b.UseSqlServer(connectionString);
+                        b.UseSqlServer(connectionString, sql => sql.MigrationsAssembly(typeof(Program).GetTypeInfo().Assembly.GetName().Name));
                 });
 
             builder.Services.AddAuthentication()
