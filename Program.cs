@@ -1,5 +1,8 @@
 ﻿using ECU_CoN_SSO;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
 using Serilog;
+using System;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
@@ -9,26 +12,45 @@ Log.Information("Starting up");
 
 try
 {
-    var builder = WebApplication.CreateBuilder(args);
+    //var builder = WebApplication.CreateBuilder(args);
 
-    builder.Host.UseSerilog((ctx, lc) => lc
-        .WriteTo.Console(outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}")
-        .Enrich.FromLogContext()
-        .ReadFrom.Configuration(ctx.Configuration));
+    //builder.Host.UseSerilog((ctx, lc) => lc
+    //    .WriteTo.Console(outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}")
+    //    .Enrich.FromLogContext()
+    //    .ReadFrom.Configuration(ctx.Configuration));
 
-    var app = builder
-        .ConfigureServices()
-        .ConfigurePipeline();
+    //var app = builder
+    //    .ConfigureServices()
+    //    .ConfigurePipeline();
+    var builder = Host.CreateDefaultBuilder(args)
+        .ConfigureWebHostDefaults(webBuilder =>
+        {
+            // Load environment-specific appsettings.json
+            webBuilder.ConfigureAppConfiguration((hostingContext, config) =>
+            {
+                config.AddJsonFile($"appsettings.{hostingContext.HostingEnvironment.EnvironmentName}.json", optional: true);
+            });
+
+            webBuilder.UseSerilog((ctx, lc) => lc
+                .WriteTo.Console(outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}")
+                .Enrich.FromLogContext()
+                .ReadFrom.Configuration(ctx.Configuration));
+
+            webBuilder.UseStartup<Startup>();
+        });
+
+    var app = builder.Build();
+
 
     // this seeding is only for the template to bootstrap the DB and users.
     // in production you will likely want a different approach.
-    if (args.Contains("/seed"))
-    {
-        Log.Information("Seeding database...");
-        SeedData.EnsureSeedData(app);
-        Log.Information("Done seeding database. Exiting.");
-        return;
-    }
+    //if (args.Contains("/seed"))
+    //{
+    //    Log.Information("Seeding database...");
+    //    SeedData.EnsureSeedData(app);
+    //    Log.Information("Done seeding database. Exiting.");
+    //    return;
+    //}
 
     app.Run();
 }

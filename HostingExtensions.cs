@@ -5,6 +5,7 @@ using ECU_CoN_SSO.Pages.Admin.Clients;
 using ECU_CoN_SSO.Pages.Admin.IdentityScopes;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using System.Reflection;
 
@@ -34,7 +35,6 @@ namespace ECU_CoN_SSO
                 .AddConfigurationStore(options =>
                 {
                     options.ConfigureDbContext = b =>
-                        // b.UseSqlite(connectionString, dbOpts => dbOpts.MigrationsAssembly(typeof(Program).Assembly.FullName));
                         b.UseSqlServer(connectionString, sql => sql.MigrationsAssembly(typeof(Program).GetTypeInfo().Assembly.GetName().Name));
                 })
                 // this is something you will want in production to reduce load on and requests to the DB
@@ -44,7 +44,6 @@ namespace ECU_CoN_SSO
                 .AddOperationalStore(options =>
                 {
                     options.ConfigureDbContext = b =>
-                        // b.UseSqlite(connectionString, dbOpts => dbOpts.MigrationsAssembly(typeof(Program).Assembly.FullName));
                         b.UseSqlServer(connectionString, sql => sql.MigrationsAssembly(typeof(Program).GetTypeInfo().Assembly.GetName().Name));
                 });
 
@@ -58,6 +57,25 @@ namespace ECU_CoN_SSO
                     // set the redirect URI to https://localhost:5001/signin-google
                     options.ClientId = "copy client ID from Google here";
                     options.ClientSecret = "copy client secret from Google here";
+                })
+                .AddOpenIdConnect("aad", "Azure AD", options =>
+                {
+                    options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
+                    options.ForwardSignOut = IdentityServerConstants.SignoutScheme;
+
+                    options.Authority = "https://login.windows.net/4ca9cb4c-5e5f-4be9-b700-c532992a3705";
+                    options.ClientId = "96e3c53e-01cb-4244-b658-a42164cb67a9";
+                    options.ResponseType = "id_token";
+                    options.CallbackPath = "/signin-aad";
+                    options.SignedOutCallbackPath = "/signout-callback-aad";
+                    options.RemoteSignOutPath = "/signout-aad";
+                    options.MapInboundClaims = false;
+
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        NameClaimType = "name",
+                        RoleClaimType = "role"
+                    };
                 });
 
 

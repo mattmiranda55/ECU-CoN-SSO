@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\Matt Miranda\Documents\ECU-CoN-SSO\bin\Release\net6.0\publish\</_PublishTargetUrl>
+    <History>True|2023-11-10T19:35:22.1249217Z;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="db">
+      <Value>Server=CON1185-P03\SQLExpress%3bDatabase=IdentityServer%3bUser ID=IDServer%3bPassword=testing%3btrusted_connection=yes%3bTrustServerCertificate=true%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

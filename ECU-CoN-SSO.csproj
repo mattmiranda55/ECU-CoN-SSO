@@ -6,6 +6,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Content Remove="appsettings.Production.json" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Duende.IdentityServer.EntityFramework" Version="6.3.2" />
 
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="6.0.0" />
@@ -26,6 +30,10 @@
 	<ItemGroup>
 		<Folder Include="Migrations\" />
 		<Folder Include="wwwroot\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="appsettings.Production.json" />
 	</ItemGroup>
 
 </Project>

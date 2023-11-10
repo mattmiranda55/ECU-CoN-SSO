@@ -121,3 +121,4 @@ C:\Users\Matt Miranda\Documents\ECU-CoN-SSO\bin\Debug\net6.0\System.CodeDom.dll
 C:\Users\Matt Miranda\Documents\ECU-CoN-SSO\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 C:\Users\Matt Miranda\Documents\ECU-CoN-SSO\bin\Debug\net6.0\System.Text.Json.dll
 C:\Users\Matt Miranda\Documents\ECU-CoN-SSO\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\Matt Miranda\Documents\ECU-CoN-SSO\bin\Debug\net6.0\appsettings.Development.json
