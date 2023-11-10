@@ -1,3 +1,4 @@
+# How to Run Locally
 1. Open Microsoft SQL Server Management Studio and create a new database named "IdentityServer"
 2. Create a new login with a username and password that you chose. Make sure to click ```SQL Sever Authentication```and unclick ```Enforce Password Policy```
 3. Map the login you created to the IdentityServer database and give the login the database roles of "public", "db_datareader", and "db_datawriter"
@@ -7,3 +8,6 @@
 2. In ```appsettings.json``` change the ConnectionString "db" to ```"db": "Server={server name};Database=IdentityServer;User ID={username of login};Password={password};trusted_connection=yes;TrustServerCertificate=true;"```
 1. Run ```.\buildschema``` in the Visual Studio Developer PowerShell window
 1. Run ```Update-Database -Context PersistedGrantDbContext``` and ```Update-Database -Context ConfigurationDbContext``` in the NuGet Package Manager Console
+
+
+# Build Instructions for Server Deployment Coming Soon
