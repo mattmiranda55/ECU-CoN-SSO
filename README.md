@@ -1,6 +1,6 @@
 1. Open Microsoft SQL Server Management Studio and create a new database named "IdentityServer"
 2. Create a new login with a username and password that you chose. Make sure to click ```SQL Sever Authentication```and unclick ```Enforce Password Policy```
-3. Give this login the roles ```dbcreator``` and ```sysadmin``` and map the login to the IdentityServer database you created
+3. Map the login you created to the IdentityServer database and give the login the database roles of "public", "db_datareader", and "db_datawriter"
 1. Install Duende.IdentityServer.Templates using ```dotnet new -i Duende.IdentityServer.Templates``` in command prompt
 1. Open the .sln file in Visual Studio
 1. Install ```Microsoft.EntityFrameworkCore.SqlServer```, ```Microsoft.EntityFrameworkCore.Tools```, ```Microsoft.EntityFrameworkCore.Design``` in NuGet Package Manager
