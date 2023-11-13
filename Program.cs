@@ -1,71 +1,54 @@
-﻿using ECU_CoN_SSO;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using System;
 
-Log.Logger = new LoggerConfiguration()
-    .WriteTo.Console()
-    .CreateBootstrapLogger();
-
-Log.Information("Starting up");
-
-try
+public class Program
 {
-    //var builder = WebApplication.CreateBuilder(args);
+    public static void Main(string[] args)
+    {
+        Log.Logger = new LoggerConfiguration()
+            .WriteTo.Console()
+            .CreateBootstrapLogger();
 
-    //builder.Host.UseSerilog((ctx, lc) => lc
-    //    .WriteTo.Console(outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}")
-    //    .Enrich.FromLogContext()
-    //    .ReadFrom.Configuration(ctx.Configuration));
+        Log.Information("Starting up");
 
-    //var app = builder
-    //    .ConfigureServices()
-    //    .ConfigurePipeline();
-    var builder = Host.CreateDefaultBuilder(args)
+        try
+        {
+            CreateHostBuilder(args).Build().Run();
+        }
+        catch (Exception ex) when (
+            ex.GetType().Name is not "StopTheHostException" &&
+            ex.GetType().Name is not "HostAbortedException"
+        )
+        {
+            Log.Fatal(ex, "Unhandled exception");
+        }
+        finally
+        {
+            Log.Information("Shut down complete");
+            Log.CloseAndFlush();
+        }
+    }
+
+    public static IHostBuilder CreateHostBuilder(string[] args) =>
+       Host.CreateDefaultBuilder(args)
         .ConfigureWebHostDefaults(webBuilder =>
         {
-            // Load environment-specific appsettings.json
             webBuilder.ConfigureAppConfiguration((hostingContext, config) =>
             {
                 config.AddJsonFile($"appsettings.{hostingContext.HostingEnvironment.EnvironmentName}.json", optional: true);
             });
 
-            webBuilder.UseSerilog((ctx, lc) => lc
+            webBuilder.UseStartup<Startup>();
+        })
+        .UseSerilog((hostingContext, loggerConfiguration) =>
+        {
+            loggerConfiguration
                 .WriteTo.Console(outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}")
                 .Enrich.FromLogContext()
-                .ReadFrom.Configuration(ctx.Configuration));
-
-            webBuilder.UseStartup<Startup>();
+                .ReadFrom.Configuration(hostingContext.Configuration.GetSection("Serilog"));
         });
 
-    var app = builder.Build();
 
-
-    // this seeding is only for the template to bootstrap the DB and users.
-    // in production you will likely want a different approach.
-    //if (args.Contains("/seed"))
-    //{
-    //    Log.Information("Seeding database...");
-    //    SeedData.EnsureSeedData(app);
-    //    Log.Information("Done seeding database. Exiting.");
-    //    return;
-    //}
-
-    app.Run();
-}
-catch (Exception ex) when (
-                            // https://github.com/dotnet/runtime/issues/60600
-                            ex.GetType().Name is not "StopTheHostException"
-                            // HostAbortedException was added in .NET 7, but since we target .NET 6 we
-                            // need to do it this way until we target .NET 8
-                            && ex.GetType().Name is not "HostAbortedException"
-                        )
-{
-    Log.Fatal(ex, "Unhandled exception");
-}
-finally
-{
-    Log.Information("Shut down complete");
-    Log.CloseAndFlush();
 }

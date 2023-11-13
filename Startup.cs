@@ -36,10 +36,11 @@ public class Startup
         {
             app.UseDeveloperExceptionPage();
         }
-        else
-        {
-            // Configure production-specific behavior
-        }
+        //else
+        //{
+        //    // Configure production-specific behavior
+        //}
+
 
         // Configure other middleware and routing
         app.UseStaticFiles();
@@ -47,10 +48,6 @@ public class Startup
         app.UseAuthorization();
         app.UseEndpoints(endpoints =>
         {
-            endpoints.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Pages}/{action=Index}/{id?}"
-            );
             endpoints.MapRazorPages().RequireAuthorization();
         });
         app.UseIdentityServer();
