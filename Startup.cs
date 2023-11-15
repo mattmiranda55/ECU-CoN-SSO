@@ -18,6 +18,9 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
+        var builder = WebApplication.CreateBuilder();
+        var app = builder.ConfigureServices();
+        app.ConfigurePipeline();
         services.AddIdentityServer(options =>
         {
             // Configure IdentityServer options here
@@ -48,6 +51,10 @@ public class Startup
         app.UseAuthorization();
         app.UseEndpoints(endpoints =>
         {
+            endpoints.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}"
+            );
             endpoints.MapRazorPages().RequireAuthorization();
         });
         app.UseIdentityServer();

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ECU-CoN-SSO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79975930b5ebb61249d26de2772b74d35785e5ee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8e8b321de7f67772cd9526190e66420a61aef59d")]
 [assembly: System.Reflection.AssemblyProductAttribute("ECU-CoN-SSO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ECU-CoN-SSO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

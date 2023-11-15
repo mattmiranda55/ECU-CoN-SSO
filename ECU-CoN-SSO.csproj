@@ -36,4 +36,10 @@
 	  <None Include="appsettings.Production.json" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Compile Update="HostingExtensions.cs">
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </Compile>
+	</ItemGroup>
+
 </Project>

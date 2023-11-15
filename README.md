@@ -13,4 +13,4 @@
 # Build Instructions for Server Deployment Coming Soon
 
 # Necessary Dependencies
-1. [.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0). Make sure to download the correct version for your system architecture.
+1. [.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0). Make sure to download the correct version for your system architecture.
