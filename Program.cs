@@ -37,7 +37,7 @@ public class Program
         {
             webBuilder.ConfigureAppConfiguration((hostingContext, config) =>
             {
-                config.AddJsonFile($"appsettings.{hostingContext.HostingEnvironment.EnvironmentName}.json", optional: true);
+                config.AddJsonFile($"appsettings.{hostingContext.HostingEnvironment.EnvironmentName}.json", optional: false);
             });
 
             webBuilder.UseStartup<Startup>();

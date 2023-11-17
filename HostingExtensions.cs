@@ -57,26 +57,26 @@ namespace ECU_CoN_SSO
                     // set the redirect URI to https://localhost:5001/signin-google
                     options.ClientId = "copy client ID from Google here";
                     options.ClientSecret = "copy client secret from Google here";
-                })
-                .AddOpenIdConnect("aad", "Azure AD", options =>
-                {
-                    options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
-                    options.ForwardSignOut = IdentityServerConstants.SignoutScheme;
-
-                    options.Authority = "https://login.windows.net/4ca9cb4c-5e5f-4be9-b700-c532992a3705";
-                    options.ClientId = "96e3c53e-01cb-4244-b658-a42164cb67a9";
-                    options.ResponseType = "id_token";
-                    options.CallbackPath = "/signin-aad";
-                    options.SignedOutCallbackPath = "/signout-callback-aad";
-                    options.RemoteSignOutPath = "/signout-aad";
-                    options.MapInboundClaims = false;
-
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        NameClaimType = "name",
-                        RoleClaimType = "role"
-                    };
                 });
+                //.AddOpenIdConnect("aad", "Azure AD", options =>
+                //{
+                //    options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
+                //    options.ForwardSignOut = IdentityServerConstants.SignoutScheme;
+
+                //    options.Authority = "https://login.windows.net/4ca9cb4c-5e5f-4be9-b700-c532992a3705";
+                //    options.ClientId = "96e3c53e-01cb-4244-b658-a42164cb67a9";
+                //    options.ResponseType = "id_token";
+                //    options.CallbackPath = "/signin-aad";
+                //    options.SignedOutCallbackPath = "/signout-callback-aad";
+                //    options.RemoteSignOutPath = "/signout-aad";
+                //    options.MapInboundClaims = false;
+
+                //    options.TokenValidationParameters = new TokenValidationParameters
+                //    {
+                //        NameClaimType = "name",
+                //        RoleClaimType = "role"
+                //    };
+                //});
 
 
             // this adds the necessary config for the simple admin/config pages
