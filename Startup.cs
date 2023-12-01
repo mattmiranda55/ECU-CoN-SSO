@@ -27,16 +27,18 @@ public class Startup
         var app = builder.ConfigureServices();
         app.ConfigurePipeline();
         services.AddControllersWithViews();
+        services.AddDbContext<ECUDbContext>(options =>
+        {
+            options.UseSqlServer(Configuration.GetConnectionString("db"), sql => sql.MigrationsAssembly(typeof(Startup).GetTypeInfo().Assembly.GetName().Name));
+        });
         services.AddScoped<ClientRepository>();
         services.AddScoped<ApiScopeRepository>();
         services.AddScoped<IdentityScopeRepository>();
-        services.AddDbContext<ConfigurationDbContext>(options =>
-        {
-            options.UseSqlServer(Configuration.GetConnectionString("db"));
-        });
+        services.AddAuthentication();
         services.AddIdentityServer(options =>
         {
             // Configure IdentityServer options here
+            options.Authentication.CookieLifetime = TimeSpan.FromHours(2);
         })
         .AddInMemoryClients(Config.Clients)  // Example: Configure your clients
         .AddInMemoryIdentityResources(Config.IdentityResources)  // Example: Configure your identity resources
